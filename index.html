@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobe Biolab LLC — Private Label SPF 50</title>
+  <meta name="description" content="Invisible mineral SPF 50 for indie beauty brands. Private label, low MOQ, clean formula. Founded by a Harvard-trained biostatistician.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #1A1A1A; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 0 32px; }
+    /* Header */
+    .site-header { padding: 32px 0; border-bottom: 1px solid #E8E5E0; }
+    .site-logo { font-size: 13px; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 600; color: #1A1A1A; display: block; }
+    .site-tagline { font-size: 11px; color: #999; letter-spacing: 0.1em; margin-top: 4px; }
+    /* Hero */
+    .hero { padding: 80px 0 64px; border-bottom: 1px solid #E8E5E0; }
+    .hero-label { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: #999; margin-bottom: 20px; }
+    .hero-h1 { font-size: clamp(36px, 5vw, 60px); font-weight: 300; line-height: 1.08; margin-bottom: 28px; letter-spacing: -0.02em; }
+    .hero-sub { font-size: 17px; line-height: 1.8; color: #555; max-width: 580px; margin-bottom: 40px; }
+    .hero-cta { display: inline-block; background: #1A1A1A; color: #fff; padding: 16px 32px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: opacity 0.2s; }
+    .hero-cta:hover { opacity: 0.82; }
+    /* Sections */
+    .section { padding: 64px 0; border-bottom: 1px solid #E8E5E0; }
+    .section-label { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: #999; margin-bottom: 32px; }
+    /* Why grid */
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    @media (max-width: 640px) { .why-grid { grid-template-columns: 1fr; } }
+    .why-item { display: flex; align-items: flex-start; gap: 14px; padding: 16px 0; border-bottom: 1px solid #F0EDE8; }
+    .why-check { color: #1A1A1A; font-size: 14px; font-weight: 600; flex-shrink: 0; margin-top: 2px; }
+    .why-text { font-size: 15px; line-height: 1.5; color: #444; }
+    /* Stat grid */
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #E8E5E0; }
+    @media (max-width: 640px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+    .stat-card { background: #fff; padding: 28px 24px; }
+    .stat-num { font-size: 32px; font-weight: 300; line-height: 1; margin-bottom: 6px; }
+    .stat-desc { font-size: 12px; color: #888; letter-spacing: 0.05em; }
+    /* Pain */
+    .pain-block { max-width: 640px; }
+    .pain-h2 { font-size: clamp(24px, 3.5vw, 36px); font-weight: 300; line-height: 1.2; margin-bottom: 20px; }
+    .pain-p { font-size: 16px; line-height: 1.8; color: #555; margin-bottom: 16px; }
+    /* Spec list */
+    .spec-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+    @media (max-width: 640px) { .spec-list { grid-template-columns: 1fr; } }
+    .spec-list li { font-size: 14px; line-height: 1.6; color: #444; padding: 14px 0; border-bottom: 1px solid #F0EDE8; display: flex; align-items: flex-start; gap: 12px; }
+    .spec-list li::before { content: ''; display: block; width: 4px; height: 4px; background: #1A1A1A; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+    /* Included list */
+    .incl-list { list-style: none; }
+    .incl-list li { font-size: 15px; line-height: 1.7; color: #444; padding: 14px 0; border-bottom: 1px solid #F0EDE8; display: flex; gap: 16px; }
+    .incl-list li::before { content: '✓'; color: #1A1A1A; font-size: 13px; flex-shrink: 0; margin-top: 1px; }
+    /* Tier grid */
+    .tier-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: #E8E5E0; }
+    @media (max-width: 640px) { .tier-grid { grid-template-columns: repeat(2, 1fr); } }
+    .tier { background: #fff; padding: 28px 20px; }
+    .tier.featured { background: #1A1A1A; }
+    .tier.featured .tier-name, .tier.featured .tier-units, .tier.featured .tier-desc { color: #fff; }
+    .tier.featured .tier-badge { color: #888; }
+    .tier-badge { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: #bbb; margin-bottom: 12px; display: block; }
+    .tier-name { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #999; margin-bottom: 10px; }
+    .tier-units { font-size: 26px; font-weight: 300; margin-bottom: 12px; color: #1A1A1A; }
+    .tier-desc { font-size: 12px; color: #aaa; line-height: 1.5; }
+    .tier-note { font-size: 13px; color: #888; margin-top: 24px; line-height: 1.7; }
+    /* Form */
+    .form-wrap { max-width: 620px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
+    .jbl-input, .jbl-select, .jbl-textarea {
+      width: 100%; padding: 14px 16px; border: 1px solid #D8D4CE;
+      background: #fff; font-size: 15px; font-family: inherit;
+      color: #1A1A1A; outline: none; border-radius: 0; -webkit-appearance: none;
+    }
+    .jbl-input:focus, .jbl-select:focus, .jbl-textarea:focus { border-color: #1A1A1A; }
+    .jbl-textarea { min-height: 120px; resize: vertical; margin-top: 16px; }
+    .jbl-select { margin-bottom: 16px; }
+    .jbl-btn {
+      width: 100%; padding: 17px; background: #1A1A1A; color: #fff;
+      border: none; font-size: 12px; letter-spacing: 0.18em;
+      text-transform: uppercase; cursor: pointer; font-family: inherit; margin-top: 16px;
+    }
+    .jbl-btn:hover { opacity: 0.85; }
+    .form-note { font-size: 12px; color: #999; margin-top: 12px; line-height: 1.6; }
+    /* Thank you state */
+    .thank-you { display: none; padding: 64px 0; text-align: center; }
+    .thank-you.visible { display: block; }
+    .ty-h2 { font-size: clamp(24px, 3vw, 36px); font-weight: 300; margin-bottom: 16px; }
+    .ty-p { font-size: 16px; line-height: 1.8; color: #555; max-width: 480px; margin: 0 auto; }
+    /* Footer */
+    .site-footer { padding: 40px 0; text-align: center; border-top: 1px solid #E8E5E0; }
+    .footer-text { font-size: 11px; color: #bbb; letter-spacing: 0.08em; line-height: 2; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <span class="site-logo">Jobe Biolab LLC</span>
+      <p class="site-tagline">Private Label Division</p>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="hero-label">Private Label SPF Program</p>
+      <h1 class="hero-h1">The SPF 50 your brand<br>has been waiting for.</h1>
+      <p class="hero-sub">Mineral. Clean. Designed to minimize white cast across diverse skin tones. Carry it under your brand name — starting at just 50 units. No long-term commitments.</p>
+      <a href="#enquire" class="hero-cta">Launch Your SPF</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="section-label">Why Brands Choose Jobe Biolab</p>
+      <div class="why-grid">
+        <div class="why-item"><span class="why-check">✓</span><span class="why-text">Start with as few as 50 units — no high-volume commitment required</span></div>
+        <div class="why-item"><span class="why-check">✓</span><span class="why-text">FDA OTC-compliant SPF 50 — Drug Facts panel on every unit</span></div>
+        <div class="why-item"><span class="why-check">✓</span><span class="why-text">Mineral formula — non-nano zinc oxide as the primary active</span></div>
+        <div class="why-item"><span class="why-check">✓</span><span class="why-text">Evaluated across diverse skin tones for wearability and finish</span></div>
+        <div class="why-item"><span class="why-check">✓</span><span class="why-text">Your brand name, logo, and product name on every unit</span></div>
+        <div class="why-item"><span class="why-check">✓</span><span class="why-text">Regulatory guidance and labeling compliance handled for you</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="section-label">Formula At A Glance</p>
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-num">SPF 50</div><div class="stat-desc">Broad spectrum UVA/UVB</div></div>
+        <div class="stat-card"><div class="stat-num">Mineral</div><div class="stat-desc">Non-nano zinc oxide</div></div>
+        <div class="stat-card"><div class="stat-num">Diverse</div><div class="stat-desc">Evaluated across skin tones</div></div>
+        <div class="stat-card"><div class="stat-num">50 units</div><div class="stat-desc">Starting minimum order</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="pain-block">
+        <p class="section-label">The Problem We Solved</p>
+        <h2 class="pain-h2">High minimums. Compromised formulas. A finish that does not work on every skin tone.</h2>
+        <p class="pain-p">Most private label SPF programs force brands to choose between high minimums, compromised formulas, or finishes that fail deeper skin tones. We built ours differently.</p>
+        <p class="pain-p">Founded by a Harvard-trained biostatistician, Jobe Biolab spent months evaluating mineral SPF formulations against standards for wearability, ingredient integrity, regulatory compliance, and skin-tone compatibility — so emerging brands do not have to.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="section-label">Formulation Standards</p>
+      <ul class="spec-list">
+        <li>Non-nano zinc oxide — primary broad-spectrum active</li>
+        <li>Iron oxides — tinted options for diverse skin tone wear</li>
+        <li>Evaluated across Fitzpatrick skin types I–VI</li>
+        <li>Broad spectrum UVA and UVB protection</li>
+        <li>Zero oxybenzone, zero octinoxate</li>
+        <li>Zero phenoxyethanol, zero PEGs</li>
+        <li>Zero silicones — clean actives throughout</li>
+        <li>Water-resistant formulation</li>
+        <li>Lightweight, skin-compatible texture</li>
+        <li>FDA OTC drug compliant — Drug Facts panel on every unit</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="section-label">What Is Included</p>
+      <ul class="incl-list">
+        <li>SPF 50 mineral formula — produced to our quality specifications</li>
+        <li>Your brand name, logo, and custom product name on every unit</li>
+        <li>FDA-compliant OTC Drug Facts panel — active ingredient declaration included</li>
+        <li>Shade options available on request</li>
+        <li>Pre-shipment quality review on every order</li>
+        <li>Regulatory guidance on labeling requirements</li>
+        <li>Fulfilled and shipped within the United States</li>
+        <li>Dedicated point of contact from first enquiry through delivery</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="section-label">Pricing Tiers</p>
+      <div class="tier-grid">
+        <div class="tier">
+          <span class="tier-badge">Entry</span>
+          <div class="tier-name">Starter</div>
+          <div class="tier-units">50 units</div>
+          <div class="tier-desc">For brands testing SPF or launching a limited run. Lowest commitment, fastest start.</div>
+        </div>
+        <div class="tier featured">
+          <span class="tier-badge">Most Popular</span>
+          <div class="tier-name">Growth</div>
+          <div class="tier-units">100 units</div>
+          <div class="tier-desc">The sweet spot for most emerging brands building a core SPF SKU.</div>
+        </div>
+        <div class="tier">
+          <span class="tier-badge">Standard</span>
+          <div class="tier-name">Established</div>
+          <div class="tier-units">250 units</div>
+          <div class="tier-desc">Suitable for brands with existing distribution and a known sell-through rate.</div>
+        </div>
+        <div class="tier">
+          <span class="tier-badge">Volume</span>
+          <div class="tier-name">Scale</div>
+          <div class="tier-units">500+ units</div>
+          <div class="tier-desc">Custom pricing and priority fulfillment for high-volume partners.</div>
+        </div>
+      </div>
+      <p class="tier-note">Pricing starts from approximately $12–15 per unit at 50 units and decreases with volume. Exact pricing depends on order size, shade selection, and label complexity — confirmed upon enquiry.</p>
+    </div>
+  </section>
+
+  <section class="section" id="enquire">
+    <div class="wrap">
+      <div class="thank-you" id="thankYou">
+        <h2 class="ty-h2">Thank you for your enquiry.</h2>
+        <p class="ty-p">A member of our team will review your submission and reach out within 1–2 business days. We look forward to learning more about your brand.</p>
+      </div>
+
+      <div id="formSection">
+        <p class="section-label">Launch Your SPF</p>
+        <div class="form-wrap">
+          <!--
+            SETUP INSTRUCTIONS:
+            1. Go to formspree.io and create a free account
+            2. Create a new form — set the email to hello@nordicskin.health
+            3. Copy your form endpoint (looks like https://formspree.io/f/xxxxxxxx)
+            4. Replace https://formspree.io/f/mnjyrljb below with that URL
+          -->
+          <form id="contactForm" action="https://formspree.io/f/mnjyrljb" method="POST">
+            <div class="form-row">
+              <input class="jbl-input" type="text" name="Brand Name" placeholder="Brand Name" required>
+              <input class="jbl-input" type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-row">
+              <input class="jbl-input" type="email" name="email" placeholder="Email Address" required>
+              <input class="jbl-input" type="text" name="Website" placeholder="Website (optional)">
+            </div>
+            <select class="jbl-select" name="Order Volume">
+              <option value="" disabled selected>Estimated Order Volume</option>
+              <option>50 units</option>
+              <option>100 units</option>
+              <option>250 units</option>
+              <option>500+ units</option>
+              <option>Not sure yet</option>
+            </select>
+            <textarea class="jbl-textarea" name="message" placeholder="Tell us about your brand and what you are building"></textarea>
+            <button class="jbl-btn" type="submit">Launch Your SPF</button>
+            <p class="form-note">We respond within 1–2 business days. All enquiries are treated with complete confidentiality.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-text">Jobe Biolab LLC &nbsp;&middot;&nbsp; Boston, Massachusetts &nbsp;&middot;&nbsp; jobebiolab.com</p>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          document.getElementById('formSection').style.display = 'none';
+          document.getElementById('thankYou').classList.add('visible');
+        } else {
+          alert('Something went wrong. Please email us directly.');
+        }
+      } catch {
+        alert('Something went wrong. Please email us directly.');
+      }
+    });
+  </script>
+
+</body>
+</html>
