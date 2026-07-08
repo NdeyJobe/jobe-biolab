@@ -95,14 +95,26 @@
     /* Footer */
     .site-footer { padding: 40px 0; text-align: center; border-top: 1px solid #E8E5E0; }
     .footer-text { font-size: 11px; color: #bbb; letter-spacing: 0.08em; line-height: 2; }
+    /* Nav */
+    .site-header .wrap { display: flex; justify-content: space-between; align-items: flex-end; }
+    .site-nav { display: flex; gap: 28px; }
+    .site-nav a { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #999; text-decoration: none; transition: color 0.2s; padding-bottom: 2px; }
+    .site-nav a:hover, .site-nav a.active { color: #1A1A1A; }
+    @media (max-width: 640px) { .site-header .wrap { flex-direction: column; align-items: flex-start; gap: 16px; } }
   </style>
 </head>
 <body>
 
   <header class="site-header">
     <div class="wrap">
-      <span class="site-logo">Jobe Biolab LLC</span>
-      <p class="site-tagline">Private Label Division</p>
+      <div>
+        <span class="site-logo">Jobe Biolab LLC</span>
+        <p class="site-tagline">Private Label Division</p>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html" class="active">SPF</a>
+        <a href="about.html">About Us</a>
+      </nav>
     </div>
   </header>
 
@@ -148,22 +160,6 @@
         <h2 class="pain-h2">High minimums. Compromised formulas. A finish that does not work on every skin tone.</h2>
         <p class="pain-p">Most private label SPF programs force brands to choose between high minimums, compromised formulas, or finishes that fail deeper skin tones. We built ours differently.</p>
         <p class="pain-p">Founded by a Harvard-trained biostatistician, Jobe Biolab spent months evaluating mineral SPF formulations against standards for wearability, ingredient integrity, regulatory compliance, and skin-tone compatibility — so emerging brands do not have to.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="wrap">
-      <p class="section-label">About The Founder</p>
-      <div class="founder-grid">
-        <img class="founder-photo" src="founder.jpg" alt="Isatou Jobe, Founder of Jobe Biolab LLC">
-        <div class="founder-text">
-          <p class="founder-name">Isatou Jobe</p>
-          <p class="founder-title">Founder, Jobe Biolab LLC</p>
-          <p class="founder-p">I built Jobe Biolab because I watched emerging brands get forced into an impossible choice: high minimums, compromised formulas, or a sunscreen finish that simply did not work on deeper skin tones. As a Harvard-trained biostatistician, I knew the problem was not the science — it was the standards.</p>
-          <p class="founder-p">So I set out to build a private label SPF program held to the standard I would demand for my own brand: clean actives, genuine broad-spectrum protection, and a finish evaluated across every skin tone. Nothing here is a compromise.</p>
-          <p class="founder-address">867 Boylston Street, 5th Floor<br>Boston, MA 02116</p>
-        </div>
       </div>
     </div>
   </section>
