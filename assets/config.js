@@ -15,8 +15,8 @@ const SITE_CONFIG = {
   year: new Date().getFullYear(),
 
   /* MOQ */
-  startingMOQ: 50,
-  moqLabel: "Starting B2B order quantity: 50 units.",
+  startingMOQ: 250,
+  moqLabel: "Starting B2B order quantity: 250 units.",
   moqQualifier: "Subject to product availability, packaging configuration, branding requirements, and project scope.",
 
   /* Pricing policy */
@@ -52,7 +52,7 @@ const PRODUCT_PROGRAMS = {
     activeIngredient: "Zinc Oxide",
     activePercentage: "17.5%",
     form: "Cream",
-    startingMOQ: 50,
+    startingMOQ: 250,
     manufacturing: SITE_CONFIG.manufacturingStatement,
     pricing: SITE_CONFIG.pricingStatement,
     verifiedClaims: [
