@@ -9,7 +9,7 @@ const SITE_CONFIG = {
   brand: "Jobe Biolab",
   tagline: "Private Label Sun Care",
   domain: "https://jobebiolab.com",
-  contactEmail: "hello@nordicskin.health",
+  contactEmail: "info@jobebiolab.com",
   formspreeId: "mnjyrljb",
   formspreeEndpoint: "https://formspree.io/f/mnjyrljb",
   year: new Date().getFullYear(),
