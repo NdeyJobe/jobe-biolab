@@ -56,19 +56,26 @@ const PRODUCT_PROGRAMS = {
     startingMOQ: 250,
     manufacturing: SITE_CONFIG.manufacturingStatement,
     pricing: SITE_CONFIG.pricingStatement,
+    /* Claims below are stated by the manufacturer, with supporting
+       documentation available from them on request. Obtain and file the
+       actual reports; a client's regulatory reviewer will ask for the
+       water-resistance test in particular. */
     verifiedClaims: [
       "Mineral SPF 50 cream",
       "17.5% zinc oxide",
       "Broad-spectrum UVA and UVB",
+      "Water resistant (80 minutes)",
+      "Non-nano zinc oxide",
+      "HRIPT tolerance tested",
       "No phenoxyethanol, PEG-named ingredients, or silicones listed in the current formula",
       "Evaluated across a range of skin tones",
     ],
     pendingClaims: [
       /* NEVER render these publicly until documentation is confirmed */
-      "Water resistant",
-      "Non-nano zinc oxide",
-      "Sensitive-skin suitable",
       "Reef safe",
+      "Non-comedogenic",
+      "Rosacea-prone suitable",
+      "Acne-prone suitable",
     ],
     keyIngredients: [
       "Zinc Oxide 17.5%",
