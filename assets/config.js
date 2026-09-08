@@ -31,6 +31,7 @@ const SITE_CONFIG = {
   nav: [
     { label: "Sun Care",    href: "/sun-care/" },
     { label: "How It Works", href: "/how-it-works/" },
+    { label: "Samples",     href: "/samples/" },
     { label: "About",       href: "/about/" },
     { label: "FAQs",        href: "/faqs/" },
     { label: "Contact",     href: "/contact/" },
@@ -154,6 +155,7 @@ function injectFooter() {
         <p class="ftr-label">Explore</p>
         <a href="/sun-care/">Sun Care</a>
         <a href="/how-it-works/">How It Works</a>
+        <a href="/samples/">Samples</a>
         <a href="/about/">About</a>
         <a href="/faqs/">FAQs</a>
       </div>

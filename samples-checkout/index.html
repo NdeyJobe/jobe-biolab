@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Your Sample Order | Jobe Biolab</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    /* Three-step variant of the shared process grid, stacking on small screens. */
+    .process-grid--3 { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 640px) { .process-grid--3 { grid-template-columns: 1fr; } }
+
+    /* The checkout button carries a longer label than the site's other buttons. */
+    .btn--checkout { padding: 1.1rem 2.5rem; font-size: 0.9rem; }
+    @media (max-width: 480px) {
+      .btn--checkout { padding: 1rem 1.25rem; font-size: 0.8rem; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="site-header"></header>
+
+  <!-- CONFIRMATION -->
+  <section style="padding:6rem 0 3rem;text-align:center;">
+    <div class="wrap wrap--narrow">
+      <span class="eyebrow" style="display:block;margin-bottom:2rem;">Received</span>
+      <h1 style="margin-bottom:1.5rem;">Thank you — your request<br>is <em style="font-style:italic;color:#2D4A3E;">received.</em></h1>
+      <p style="color:#6B6B68;margin:0 auto;max-width:52ch;">One step remains. Complete payment below and we will begin preparing your sample.</p>
+    </div>
+  </section>
+
+  <!-- WHAT HAPPENS NEXT -->
+  <section style="padding:2rem 0 4rem;">
+    <div class="wrap">
+      <div class="process-grid process-grid--3">
+        <div class="process-step">
+          <p class="step-num">01</p>
+          <p class="step-title">Complete your order</p>
+          <p class="step-desc">Pay the $18 total through Stripe below. Your shipping address is collected at that step.</p>
+        </div>
+        <div class="process-step">
+          <p class="step-num">02</p>
+          <p class="step-title">We ship your sample</p>
+          <p class="step-desc">Your sample ships within 5 business days, tracked via USPS. Tracking is sent to the email on your order.</p>
+        </div>
+        <div class="process-step">
+          <p class="step-num">03</p>
+          <p class="step-title">We follow up</p>
+          <p class="step-desc">We contact you within 48 hours of delivery to answer formulation questions and discuss next steps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRIPE CHECKOUT -->
+  <section class="section--alt" style="padding:5rem 0;text-align:center;">
+    <div class="wrap wrap--narrow">
+      <span class="eyebrow" style="display:block;">Payment</span>
+      <h2 style="margin:1rem 0 1.25rem;">Complete your sample order.</h2>
+      <p style="color:#6B6B68;margin:0 auto 2.5rem;max-width:50ch;">$6 sample + $12 shipping = $18 total. United States shipping only. One sample per order.</p>
+
+      <!-- ============================================================
+           STRIPE_LINK_PENDING — ACTION REQUIRED BEFORE MERGE
+
+           1. Create a Stripe Payment Link:
+                - One-time charge, $18.00 USD
+                - Physical goods; collect shipping address
+                - Shipping countries: United States only
+                - Enable Stripe's customer confirmation email
+           2. Replace the string STRIPE_LINK_PENDING in the href
+              below with the resulting https://buy.stripe.com/... URL.
+           3. Delete the <div class="pending-notice"> block directly
+              below this comment.
+
+           Until step 2 is done this button does not lead anywhere.
+           ============================================================ -->
+      <div class="pending-notice" style="border:1px solid #C8B99A;border-radius:4px;padding:1.25rem 1.5rem;background:#FAFAF7;margin:0 auto 2rem;max-width:44ch;">
+        <p style="font-size:0.8rem;color:#6B6B68;line-height:1.6;margin:0;">Checkout is being finalized. The Stripe Payment Link has not been connected yet — see the comment in the page source. Remove this notice once the link is live.</p>
+      </div>
+
+      <a href="STRIPE_LINK_PENDING" class="btn btn--primary btn--checkout">Complete Sample Order — $18</a>
+
+      <p class="form-note" style="margin-top:1.5rem;">Payment is processed by Stripe. Jobe Biolab does not store your card details.</p>
+    </div>
+  </section>
+
+  <!-- WHAT IS IN THE SAMPLE -->
+  <section style="padding:5rem 0 4rem;">
+    <div class="wrap">
+      <span class="eyebrow">Your sample</span>
+      <h2 style="margin:1rem 0 2.5rem;max-width:22ch;">What arrives.</h2>
+      <div class="grid-3">
+        <div class="grid-item">
+          <p class="grid-item-label">Formulation</p>
+          <h4>Mineral SPF 50 Cream</h4>
+          <p>1 oz / 30 mL of the current production base, 17.5% zinc oxide, shipped unbranded in a plain container.</p>
+        </div>
+        <div class="grid-item">
+          <p class="grid-item-label">Documentation</p>
+          <h4>INCI list and spec sheet</h4>
+          <p>The full ingredient list and formulation spec sheet for the base you are evaluating.</p>
+        </div>
+        <div class="grid-item">
+          <p class="grid-item-label">Support</p>
+          <h4>Direct contact</h4>
+          <p>A named contact for formulation questions, and a clear path into the private-label inquiry process.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <!-- CONTACT FALLBACK -->
+  <section style="padding:4rem 0 6rem;text-align:center;">
+    <div class="wrap wrap--narrow">
+      <p style="color:#6B6B68;margin:0 auto 1.5rem;max-width:46ch;">Questions before you order, or need more than one sample? Email <a href="mailto:hello@nordicskin.health" style="color:#2D4A3E;text-decoration:underline;text-underline-offset:3px;">hello@nordicskin.health</a> and we will help directly.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <a href="/sun-care/" class="btn btn--outline">Explore Sun Care</a>
+        <a href="/how-it-works/" class="btn btn--outline">How It Works</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="site-footer"></footer>
+  <script src="/assets/config.js"></script>
+</body>
+</html>
