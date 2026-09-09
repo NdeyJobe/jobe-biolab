@@ -383,6 +383,22 @@ hr.rule {
   max-width: 55ch;
 }
 
+/* ---------- 2-col split ----------
+   Two-column content blocks that collapse to one column on small
+   screens. Use this instead of an inline grid-template-columns, which
+   no media query can override.
+   Column ratio and gap are set per instance via the --split and
+   --split-gap custom properties, so an inline style can vary them
+   without defeating the breakpoint below. */
+.split-2 {
+  display: grid;
+  grid-template-columns: var(--split, 1fr 1fr);
+  gap: var(--split-gap, 4rem);
+}
+@media (max-width: 768px) {
+  .split-2 { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
 /* ---------- 3-col grid ---------- */
 .grid-3 {
   display: grid;
