@@ -11,6 +11,30 @@
   <meta property="og:url" content="https://jobebiolab.com/samples/">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    /* Order layout: fields beside a summary panel that stays in view. */
+    .order-layout { display: grid; grid-template-columns: 1fr 340px; gap: 3rem; align-items: start; }
+    @media (max-width: 900px) { .order-layout { grid-template-columns: 1fr; gap: 2.5rem; } }
+
+    .order-summary {
+      position: sticky;
+      top: 88px;
+      border: 1px solid #E8E3DA;
+      border-radius: 4px;
+      background: #F2EDE4;
+      padding: 1.75rem;
+    }
+    @media (max-width: 900px) { .order-summary { position: static; } }
+
+    .os-eyebrow { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: #2D4A3E; font-weight: 500; }
+    .os-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.2rem; line-height: 1.25; margin: 0.75rem 0 0.35rem; }
+    .os-sub { font-size: 0.78rem; color: #6B6B68; margin-bottom: 1.5rem; }
+    .os-row { display: flex; justify-content: space-between; gap: 1rem; font-size: 0.85rem; color: #6B6B68; padding: 0.45rem 0; }
+    .os-total { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding-top: 0.85rem; margin-top: 0.4rem; border-top: 1px solid #E8E3DA; }
+    .os-total-label { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: #6B6B68; }
+    .os-total-value { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.6rem; color: #1C1C1A; line-height: 1; }
+    .os-meta { font-size: 0.75rem; color: #6B6B68; line-height: 1.6; margin-top: 1rem; }
+  </style>
 </head>
 <body>
 
@@ -76,7 +100,7 @@
 
   <!-- FORM -->
   <section style="padding:5rem 0 4rem;">
-    <div class="wrap">
+    <div class="wrap wrap--wide">
       <span class="eyebrow">Sample request</span>
       <h2 style="margin:1rem 0 1.25rem;max-width:22ch;">Tell us where the sample is going.</h2>
       <p style="color:#6B6B68;max-width:58ch;margin-bottom:2.5rem;">Complete the form below, then continue to checkout. We collect your shipping address at the payment step.</p>
@@ -84,6 +108,9 @@
       <form id="sample-form" action="https://formspree.io/f/mnjyrljb" method="POST">
         <input type="hidden" name="_subject" value="Jobe Biolab — New Sample Request">
         <input type="hidden" name="_next" value="https://jobebiolab.com/samples-checkout/">
+
+        <div class="order-layout">
+        <div>
 
         <!-- CONTACT -->
         <p style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#2D4A3E;margin-bottom:1.5rem;font-weight:500;padding-bottom:0.75rem;border-bottom:1px solid #E8E3DA;">Contact information</p>
@@ -141,16 +168,32 @@
           </div>
         </div>
 
-        <!-- SHIPPING CONFIRMATION -->
-        <div style="border:1px solid #E8E3DA;border-radius:4px;padding:1.5rem;background:#F2EDE4;margin-bottom:2rem;">
-          <div class="form-consent">
-            <input type="checkbox" id="us_shipping" name="us_shipping" value="Confirmed" required>
-            <label for="us_shipping" style="font-size:0.85rem;color:#6B6B68;line-height:1.6;letter-spacing:0;text-transform:none;">I confirm my shipping address is in the United States. Sample orders are US-only at this time.</label>
-          </div>
         </div>
 
-        <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:1rem 2rem;font-size:0.85rem;">Continue to Checkout — $20</button>
-        <p class="form-note" style="text-align:center;margin:1rem auto 0;max-width:62ch;text-wrap:balance;">$10.95 sample + $9.05 shipping = $20 total. US shipping only. Ships within 5 business days. Shipping address collected at checkout.</p>
+        <!-- ORDER SUMMARY -->
+        <aside class="order-summary" aria-label="Order summary">
+          <span class="os-eyebrow">Your order</span>
+          <p class="os-title">Mineral SPF 50 Cream</p>
+          <p class="os-sub">Formulation sample, 1 oz / 30 mL</p>
+
+          <div class="os-row"><span>Sample</span><span>$10.95</span></div>
+          <div class="os-row"><span>Shipping, USPS tracked</span><span>$9.05</span></div>
+          <div class="os-total">
+            <span class="os-total-label">Total</span>
+            <span class="os-total-value">$20.00</span>
+          </div>
+
+          <div class="form-consent" style="margin-top:1.5rem;">
+            <input type="checkbox" id="us_shipping" name="us_shipping" value="Confirmed" required>
+            <label for="us_shipping" style="font-size:0.8rem;color:#6B6B68;line-height:1.55;letter-spacing:0;text-transform:none;">I confirm my shipping address is in the United States. Sample orders are US-only at this time.</label>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="width:100%;justify-content:center;padding:1rem 1.5rem;font-size:0.8rem;margin-top:1.25rem;">Continue to Checkout</button>
+
+          <p class="os-meta">Ships within 5 business days. Shipping address collected at checkout. One sample per order.</p>
+        </aside>
+
+        </div>
       </form>
     </div>
   </section>
