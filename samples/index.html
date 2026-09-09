@@ -224,6 +224,40 @@
         if (!note.hidden) check();
       });
     })();
+
+    /* Submit to Formspree in the background and handle the redirect here.
+       Formspree's dashboard redirect is per-form, and this form shares its
+       endpoint with the contact form, so the redirect cannot be set there
+       without sending contact submissions to the checkout page too.
+       If anything fails, fall back to a normal submit so nothing is lost. */
+    (function () {
+      var form = document.getElementById("sample-form");
+      if (!form || !window.fetch) return;
+
+      form.addEventListener("submit", function (e) {
+        if (!form.checkValidity()) return;   // let the browser show its own messages
+        e.preventDefault();
+
+        var btn = form.querySelector("button[type=submit]");
+        var label = btn ? btn.textContent : "";
+        if (btn) { btn.disabled = true; btn.textContent = "Sending"; }
+
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        }).then(function (res) {
+          if (res.ok) {
+            window.location.assign("/samples-checkout/");
+          } else {
+            throw new Error("Formspree returned " + res.status);
+          }
+        }).catch(function () {
+          if (btn) { btn.disabled = false; btn.textContent = label; }
+          form.submit();                     // plain POST, no listener, no loop
+        });
+      });
+    })();
   </script>
 </body>
 </html>
